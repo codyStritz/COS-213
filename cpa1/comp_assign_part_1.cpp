@@ -7,7 +7,6 @@
 
 #include <iostream> 
 #include <iomanip> 
-#include <array>
 using namespace std;
 
 // Returns the first (alphabetical) letter of the two provided
