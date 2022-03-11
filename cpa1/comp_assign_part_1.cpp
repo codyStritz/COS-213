@@ -1,5 +1,6 @@
 // Cody Stritz
-// Written Assignment 2 - Exercise 1
+// Comprehensive Programming Assignment
+// Problem 1
 // 2022FEB
 // C++ Programming
 // COS-213 
