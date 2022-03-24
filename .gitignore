@@ -6,5 +6,3 @@
 !*/
 # whitelist c++ files
 !*/**/*.cpp
-# whitelist header files
-!*/**/*.h
