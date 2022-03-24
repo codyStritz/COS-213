@@ -4,7 +4,7 @@ using namespace std;
 #ifndef RATIONAL_NUMBER_H
 #define RATIONAL_NUMBER_H
 
-// RationalNumber class definition
+// RationalNumber interface
 class RationalNumber {
   public:
     explicit RationalNumber(int = 1, int = 1); // default constructor
