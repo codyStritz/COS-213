@@ -5,6 +5,7 @@
 Savings::Savings(double balance, double interest_rate)
   : BankAccount(balance), interest_rate_(interest_rate) {}
 
+// Credits (deposits) the given amount + any earned interest
 void Savings::credit(double amount) {
   BankAccount::credit(calculateInterest() + amount);
 }

@@ -7,8 +7,8 @@ using namespace std;
 class BankAccount {
   public:
     BankAccount(double);
-    virtual void credit(double);
-    virtual bool debit(double);
+    virtual void credit(double);  // virtual
+    virtual bool debit(double);   // virtual
     double getBalance();
   private:
     double balance_;
@@ -18,7 +18,7 @@ class BankAccount {
 class Savings: public BankAccount {
   public:
     Savings(double, double);
-    virtual void credit(double) override;
+    virtual void credit(double) override; // override base class credit()
     double calculateInterest();
   private:
     double interest_rate_;
@@ -28,8 +28,8 @@ class Savings: public BankAccount {
 class Checking: public BankAccount {
   public:
     Checking(double, double);
-    virtual void credit(double) override;
-    virtual bool debit(double) override; 
+    virtual void credit(double) override; // override base class credit()
+    virtual bool debit(double) override;  // override base class debit()
   private:
     double fee_;
 };
