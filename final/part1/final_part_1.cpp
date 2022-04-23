@@ -1,3 +1,9 @@
+// Cody Stritz
+// Final - Part 1
+// 2022FEB
+// C++ Programming
+// COS-213 
+
 #include <iostream>
 #include <string>
 #include <chrono>

@@ -1,3 +1,9 @@
+// Cody Stritz
+// Final - Part 2
+// 2022FEB
+// C++ Programming
+// COS-213 
+
 #include <iostream>
 #include "alarm_clock.h"
 using namespace std;
