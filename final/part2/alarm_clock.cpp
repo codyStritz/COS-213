@@ -21,6 +21,7 @@ AlarmClock::AlarmClock(int hr, int min, int sec, int am_pm) {
   this->am_pm_ = am_pm == -1 ? am_pm : 1;
 }
 
+// Sets the time if valid
 void AlarmClock::SetTime(int hr, int min, int sec, int am_pm) {
   bool valid_hr = hr > 0 && hr < 13;
   bool valid_min = min >= 0 && min < 60;
@@ -41,6 +42,7 @@ void AlarmClock::SetTime(int hr, int min, int sec, int am_pm) {
   }
 }
 
+// Sets alarm if valid 
 void AlarmClock::SetAlarm(int hr, int min, int sec, int am_pm) {
   bool valid_hr = hr > 0 && hr < 13;
   bool valid_min = min >= 0 && min < 60;
@@ -62,6 +64,7 @@ void AlarmClock::SetAlarm(int hr, int min, int sec, int am_pm) {
   }
 }
 
+// Determines if Alarm is triggered
 bool AlarmClock::IsAlarmTriggered() {
   bool same_hour = hour_ == al_hour_;
   bool same_min = min_ == al_min_;
@@ -69,10 +72,12 @@ bool AlarmClock::IsAlarmTriggered() {
   return same_hour && same_min && same_sec;
 }
 
+// Dismiss the alarm
 void AlarmClock::DismissAlarm() {
   this->al_set_ = false;
 }
 
+// Increments the time by one second
 void AlarmClock::Tick() {
   if (sec_ < 59) sec_++;
   else {
@@ -91,6 +96,7 @@ void AlarmClock::Tick() {
   }
 }
 
+// Print the time
 void AlarmClock::ShowTime() {
   cout << setfill('0') << setw(2) << hour_;
   cout << ":" << setfill('0') << setw(2) << min_;
@@ -99,6 +105,7 @@ void AlarmClock::ShowTime() {
   else if (am_pm_ == -1) cout << " PM" << endl;
 }
 
+// Print the alarm time
 void AlarmClock::ShowAlarmTime() {
   if (!al_set_) cout << "No Alarm Set" << endl;
   else {
@@ -111,6 +118,7 @@ void AlarmClock::ShowAlarmTime() {
   }
 }
 
+// Let the clock run until alarm is triggered
 void AlarmClock::Run() {
   while(true) {
     if (IsAlarmTriggered()) {

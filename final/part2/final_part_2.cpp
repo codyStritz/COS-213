@@ -11,27 +11,27 @@ using namespace std;
 int main() {
   cout << "Alarm Clock Demo\n-----------" << endl;
   cout << "Using default constructor..." << endl;
-  AlarmClock clock1;
+  AlarmClock clock1;  // default constructor -> 12:00:00 AM
   cout << "Clock initilized to: " << endl;
   clock1.ShowTime();
-  clock1.SetAlarm(12,0,15,1);
+  clock1.SetAlarm(12,0,15,1); // alarm set for 12:00:15 AM
   clock1.ShowAlarmTime();
   cout << "Press any key to run demo...";
   cin.get();
-  clock1.Run();
+  clock1.Run(); // run clock until alarm
 
   cout << "Press any key to continue..." << endl;
   cin.get();
 
   cout << "Using custom constructor..." << endl;
-  AlarmClock clock2(11, 58, 55, 1);
+  AlarmClock clock2(11, 58, 55, 1);    // set clock to 11:58:55 AM
   cout << "Clock initialized to:" << endl;
   clock2.ShowTime();
-  clock2.SetAlarm(12, 0, 30, -1);
+  clock2.SetAlarm(12, 0, 30, -1);   // set alarm to 12:00:30: PM
   clock2.ShowAlarmTime();
   cout << "Press any key to run demo...";
   cin.get();
-  clock2.Run();
+  clock2.Run(); // run clock until alarm
 
   cout << "Press any key to continue...";
   cin.get();

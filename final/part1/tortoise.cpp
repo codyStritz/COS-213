@@ -3,7 +3,7 @@
 // Constructor
 Tortoise::Tortoise() : Contestant("Tortoise", "T") {}
 
-// Rolls dice and makes associated move
+// Makes move based on roll
 void Tortoise::Move(int roll) {
   if (roll < 6) FastPlod();
   else if (roll > 7) SlowPlod();
